@@ -1,0 +1,23 @@
+ //https://dotnettutorials.net/course/dot-net-design-patterns/
+ Gang of Four 23 Design Patterns 
+ 
+1. Creational Design Pattern (object creation and initialization)
+Singleton, Factory, Builder, Prototype, Fluent Interface, Factory Method, and Abstract Factory.
+
+2. Structural Design Pattern (Structural Changes of class and interfaces, and the relationship between classes)
+Adapter, Facade, Decorator, Composite, Proxy, Flyweight, and Bridge
+
+3. Behavioral Design Pattern (Communication Between Objects)
+Chain of Responsibility, Command,  Observer, Iterator, State, Template Method, Visitor, Strategy, Mediator, Memento, and Interpreter
+
+---------------------------
+dot net design patterns:
+
+Dependency Injection Design Pattern.
+Dependency Injection using Unity Container.
+Repository Design Pattern using C#.
+Repository Design Pattern using Unity of Work.
+Inversion of Control in C#.
+
+
+

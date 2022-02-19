@@ -1,0 +1,8 @@
+OOP concepts: 
+Abstraction
+Inheritance
+Polymorphism
+Encapsulation
+Interfaces
+Classes
+Abstract classes

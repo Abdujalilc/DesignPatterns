@@ -1,0 +1,9 @@
+// https://dotnettutorials.net/course/dot-net-design-patterns/
+2. Structural Design Pattern (Structural Changes of class and interfaces, and the relationship between classes)
+	1. Adapter(List iterate adapter), 
+	2. Facade(simple method after constructor call), 
+	3. Decorator(some virtual override), 
+	4. Composite(Object nested object), 
+	5. Proxy(perform operations with role for security), 
+	6. Flyweight(),
+	7. Bridge(: base(ledTv))

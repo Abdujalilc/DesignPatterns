@@ -1,0 +1,13 @@
+//https://dotnettutorials.net/course/dot-net-design-patterns/
+Behavioral Design Pattern (Communication Between Objects)
+	1. Chain of Responsibility(), 
+	2. Command(constructor injection),  
+	3. Observer(), 
+	4. Iterator(add objects to list and iterate), 
+	5. State(card inserted or not inserted), 
+	6. Template Method(abstract template inherited classes), 
+	7. Visitor(), 
+	8. Strategy(constructor injection and so on), 
+	9. Mediator(send message), 
+	10. Memento(create object, add to list, get by index), 
+	11. Interpreter(MM-DD-YYYY, DD-MM-YYYY, YYYY-MM-DD, and DD-YYYY)

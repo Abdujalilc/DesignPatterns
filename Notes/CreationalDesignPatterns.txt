@@ -1,0 +1,10 @@
+// https://dotnettutorials.net/course/dot-net-design-patterns/
+1. Creational Design Pattern (object creation and initialization)
+
+	1.Singleton (ConString Env), 
+	2.Factory (like with enum call new Object()), 
+	3.Builder (Report), 
+	4.Prototype return (Employee)this.MemberwiseClone(), 
+	5.Fluent Interface (return this), 
+	6.Factory Method (with Interface), 
+	7.Abstract Factory (with Abstract and Interface).
