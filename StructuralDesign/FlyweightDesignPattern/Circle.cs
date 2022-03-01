@@ -14,8 +14,7 @@ namespace FlyweightDesignPattern
         }
         public void Draw()
         {
-            Console.WriteLine(" Circle: Draw() [Color : " + Color + ", X Cor : " + XCor + ", YCor :" + YCor + ", Radius :"
-                    + Radius);
+            Console.WriteLine(" Circle: Draw() [Color : " + Color + ", X Cor : " + XCor + ", YCor :" + YCor + ", Radius :" + Radius);
         }
     }
 }
