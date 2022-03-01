@@ -5,7 +5,7 @@
 
 
 string cardType = "MoneyBack";
-CreditCard cardDetails = null;
+CreditCard? cardDetails = null;
 //Based of the CreditCard Type we are creating the
 //appropriate type instance using if else condition
 if (cardType == "MoneyBack")

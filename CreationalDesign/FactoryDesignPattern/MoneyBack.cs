@@ -1,6 +1,6 @@
 ﻿namespace FactoryDesignPattern
 {
-    class MoneyBack : CreditCard
+    internal class MoneyBack : CreditCard
     {
         public string GetCardType()
         {
