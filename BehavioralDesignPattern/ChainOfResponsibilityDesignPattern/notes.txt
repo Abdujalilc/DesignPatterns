@@ -1,0 +1,1 @@
+﻿Overriding abstract method as cycle
