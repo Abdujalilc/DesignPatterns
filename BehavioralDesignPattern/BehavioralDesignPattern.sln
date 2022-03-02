@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IteratorDesignPattern", "It
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverDesignPattern", "ObserverDesignPattern\ObserverDesignPattern.csproj", "{47C2E2B6-350C-4721-A32D-71F559886D88}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfResponsibilityDesignPattern", "ChainOfResponsibilityDesignPattern\ChainOfResponsibilityDesignPattern.csproj", "{84DC093C-0636-4047-80DB-DD1E91466366}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{47C2E2B6-350C-4721-A32D-71F559886D88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47C2E2B6-350C-4721-A32D-71F559886D88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47C2E2B6-350C-4721-A32D-71F559886D88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84DC093C-0636-4047-80DB-DD1E91466366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84DC093C-0636-4047-80DB-DD1E91466366}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84DC093C-0636-4047-80DB-DD1E91466366}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84DC093C-0636-4047-80DB-DD1E91466366}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
