@@ -11,13 +11,13 @@
             this.collection = collection;
         }
         // Gets first item
-        public Elempoyee First()
+        public Employee First()
         {
             current = 0;
             return collection.GetEmployee(current);
         }
         // Gets next item
-        public Elempoyee Next()
+        public Employee Next()
         {
             current += step;
             if (!IsCompleted)

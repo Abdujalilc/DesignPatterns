@@ -3,7 +3,7 @@ namespace IteratorDesignPattern
 {
     class ConcreteCollection : AbstractCollection
     {
-        private List<Elempoyee> listEmployees = new List<Elempoyee>();
+        private List<Employee> listEmployees = new List<Employee>();
         //Create Iterator
         public Iterator CreateIterator()
         {
@@ -15,12 +15,12 @@ namespace IteratorDesignPattern
             get { return listEmployees.Count; }
         }
         //Add items to the collection
-        public void AddEmployee(Elempoyee employee)
+        public void AddEmployee(Employee employee)
         {
             listEmployees.Add(employee);
         }
         //Get item from collection
-        public Elempoyee GetEmployee(int IndexPosition)
+        public Employee GetEmployee(int IndexPosition)
         {
             return listEmployees[IndexPosition];
         }

@@ -2,8 +2,8 @@
 {
     interface AbstractIterator
     {
-        Elempoyee First();
-        Elempoyee Next();
+        Employee First();
+        Employee Next();
         bool IsCompleted { get; }
     }
 }
