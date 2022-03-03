@@ -1,0 +1,3 @@
+﻿//ATM machine state
+first new ATMMachine() gets/sets  DebitCardNotInsertedState via ATMState interface,
+then ATMMachine.InsertDebitCard method changes type reference as atmMachineState = new DebitCardInsertedState();
