@@ -1,0 +1,3 @@
+﻿Document is in command types
+Command types are in MenuOptions via ICommand
+Menu options starts in Program.cs
