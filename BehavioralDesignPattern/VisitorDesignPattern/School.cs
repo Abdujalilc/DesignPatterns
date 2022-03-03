@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
-namespace VisitorDesignPattern
+﻿namespace VisitorDesignPattern
 {
     public class School
     {
-        private static List<IElement> elements;
+        private static readonly List<IElement> elements;
         static School()
         {
             elements = new List<IElement>
@@ -15,7 +14,7 @@ namespace VisitorDesignPattern
         }
         public void PerformOperation(IVisitor visitor)
         {
-            foreach (var kid in elements)
+            foreach (IElement? kid in elements)
             {
                 kid.Accept(visitor);
             }

@@ -1,19 +1,15 @@
-﻿using System.Collections.Generic;
-namespace IteratorDesignPattern
+﻿namespace IteratorDesignPattern
 {
-    class ConcreteCollection : AbstractCollection
+    internal class ConcreteCollection : AbstractCollection
     {
-        private List<Employee> listEmployees = new List<Employee>();
+        private readonly List<Employee> listEmployees = new List<Employee>();
         //Create Iterator
         public Iterator CreateIterator()
         {
             return new Iterator(this);
         }
         // Gets item count
-        public int Count
-        {
-            get { return listEmployees.Count; }
-        }
+        public int Count => listEmployees.Count;
         //Add items to the collection
         public void AddEmployee(Employee employee)
         {

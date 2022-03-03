@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-namespace MementoDesignPattern
+﻿namespace MementoDesignPattern
 {
     public class Caretaker
     {
-        private List<Memento> ledTvList = new List<Memento>();
+        private readonly List<Memento> ledTvList = new List<Memento>();
         public void AddMemento(Memento m)
         {
             ledTvList.Add(m);

@@ -11,7 +11,7 @@
         }
         public abstract void Send(string message);
         public abstract void Receive(string message);
-       /* public string MyProperty { get { return Name; } set { Name = value; } }
-        public string Name { get; set; }*/
+        /* public string MyProperty { get { return Name; } set { Name = value; } }
+         public string Name { get; set; }*/
     }
 }

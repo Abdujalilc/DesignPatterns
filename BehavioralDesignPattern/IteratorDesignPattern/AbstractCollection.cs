@@ -1,6 +1,6 @@
 ﻿namespace IteratorDesignPattern
 {
-    interface AbstractCollection
+    internal interface AbstractCollection
     {
         Iterator CreateIterator();
     }

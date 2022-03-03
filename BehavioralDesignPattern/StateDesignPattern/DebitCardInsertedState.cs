@@ -1,5 +1,4 @@
-﻿using System;
-namespace StateDesignPattern
+﻿namespace StateDesignPattern
 {
     public class DebitCardInsertedState : ATMState
     {

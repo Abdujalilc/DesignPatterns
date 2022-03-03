@@ -1,5 +1,4 @@
-﻿using System;
-namespace VisitorDesignPattern
+﻿namespace VisitorDesignPattern
 {
     public class Doctor : IVisitor
     {
@@ -12,7 +11,7 @@ namespace VisitorDesignPattern
         public void Visit(IElement element)
         {
             Kid kid = (Kid)element;
-            Console.WriteLine("Doctor: " + this.Name + " did the health checkup of the child: " + kid.KidName);
+            Console.WriteLine("Doctor: " + Name + " did the health checkup of the child: " + kid.KidName);
         }
     }
 }

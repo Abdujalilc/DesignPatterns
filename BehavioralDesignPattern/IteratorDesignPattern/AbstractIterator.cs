@@ -1,6 +1,6 @@
 ﻿namespace IteratorDesignPattern
 {
-    interface AbstractIterator
+    internal interface AbstractIterator
     {
         Employee First();
         Employee Next();

@@ -1,1 +1,21 @@
 ﻿static Constructor
+
+IVisitor: Doctor, Salesman
+
+IElement: Kid
+
+-static School()
+{
+	elements = new List<IElement>{new Kid("Ram"),new Kid("Sara"),new Kid("Pam")};
+}
+-new Doctor("James")
+
+-school.PerformOperation(doctor)
+	foreach (IElement? kid in elements)
+	{
+		kid.Accept(visitor);
+	}
+	
+-kid.Accept(visitor)
+	visitor.Visit(this);
+	//Get and write kid's name to console;

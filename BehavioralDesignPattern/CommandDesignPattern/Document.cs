@@ -1,5 +1,4 @@
-﻿using System;
-namespace CommandDesignPattern
+﻿namespace CommandDesignPattern
 {
     public class Document
     {

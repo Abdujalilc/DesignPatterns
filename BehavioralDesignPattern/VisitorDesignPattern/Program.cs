@@ -1,9 +1,9 @@
 ﻿using VisitorDesignPattern;
 
 School school = new School();
-var visitor1 = new Doctor("James");
-school.PerformOperation(visitor1);
+IVisitor doctor = new Doctor("James");
+school.PerformOperation(doctor);
 Console.WriteLine();
-var visitor2 = new Salesman("John");
-school.PerformOperation(visitor2);
+var salasman = new Salesman("John");
+school.PerformOperation(salasman);
 Console.Read();

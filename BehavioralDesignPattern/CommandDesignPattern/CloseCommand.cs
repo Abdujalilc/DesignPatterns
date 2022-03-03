@@ -1,8 +1,8 @@
 ﻿namespace CommandDesignPattern
 {
-    class CloseCommand : ICommand
+    internal class CloseCommand : ICommand
     {
-        private Document document;
+        private readonly Document document;
         public CloseCommand(Document doc)
         {
             document = doc;

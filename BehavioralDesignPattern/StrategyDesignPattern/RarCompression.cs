@@ -1,5 +1,4 @@
-﻿using System;
-namespace StrategyDesignPattern
+﻿namespace StrategyDesignPattern
 {
     public class RarCompression : ICompression
     {

@@ -1,8 +1,8 @@
 ﻿namespace CommandDesignPattern
 {
-    class SaveCommand : ICommand
+    internal class SaveCommand : ICommand
     {
-        private Document document;
+        private readonly Document document;
         public SaveCommand(Document doc)
         {
             document = doc;

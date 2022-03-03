@@ -1,5 +1,4 @@
-﻿using System;
-namespace InterpreterDesignPattern
+﻿namespace InterpreterDesignPattern
 {
     public class Context
     {

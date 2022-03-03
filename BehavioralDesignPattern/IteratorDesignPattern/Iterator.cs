@@ -1,10 +1,10 @@
 ﻿namespace IteratorDesignPattern
 {
-    class Iterator : AbstractIterator
+    internal class Iterator : AbstractIterator
     {
-        private ConcreteCollection collection;
+        private readonly ConcreteCollection collection;
         private int current = 0;
-        private int step = 1;
+        private readonly int step = 1;
         // Constructor
         public Iterator(ConcreteCollection collection)
         {
@@ -30,9 +30,6 @@
             }
         }
         // Check whether iteration is complete
-        public bool IsCompleted
-        {
-            get { return current >= collection.Count; }
-        }
+        public bool IsCompleted => current >= collection.Count;
     }
 }

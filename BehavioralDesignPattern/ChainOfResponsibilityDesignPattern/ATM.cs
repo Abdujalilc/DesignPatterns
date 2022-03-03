@@ -2,10 +2,10 @@
 {
     public class ATM
     {
-        private TwoThousandHandler twoThousandHandler = new TwoThousandHandler();
-        private FiveHundredHandler fiveHundredHandler = new FiveHundredHandler();
-        private TwoHundredHandler twoHundredHandler = new TwoHundredHandler();
-        private HundredHandler hundredHandler = new HundredHandler();
+        private readonly TwoThousandHandler twoThousandHandler = new TwoThousandHandler();
+        private readonly FiveHundredHandler fiveHundredHandler = new FiveHundredHandler();
+        private readonly TwoHundredHandler twoHundredHandler = new TwoHundredHandler();
+        private readonly HundredHandler hundredHandler = new HundredHandler();
 
         public ATM()
         {

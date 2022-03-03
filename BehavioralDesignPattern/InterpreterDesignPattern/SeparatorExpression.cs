@@ -1,6 +1,6 @@
 ﻿namespace InterpreterDesignPattern
 {
-    class SeparatorExpression : AbstractExpression
+    internal class SeparatorExpression : AbstractExpression
     {
         public void Evaluate(Context context)
         {

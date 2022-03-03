@@ -1,5 +1,4 @@
-﻿using System;
-namespace ObserverDesignPattern
+﻿namespace ObserverDesignPattern
 {
     public class Observer : IObserver
     {

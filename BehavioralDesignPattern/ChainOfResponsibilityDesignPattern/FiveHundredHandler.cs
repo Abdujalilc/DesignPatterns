@@ -1,5 +1,4 @@
-﻿using System;
-namespace ChainOfResponsibilityDesignPattern
+﻿namespace ChainOfResponsibilityDesignPattern
 {
     public class FiveHundredHandler : Handler
     {

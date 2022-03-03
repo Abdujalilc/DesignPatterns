@@ -2,7 +2,7 @@
 {
     public class OpenCommand : ICommand
     {
-        private Document document;
+        private readonly Document document;
         public OpenCommand(Document doc)
         {
             document = doc;

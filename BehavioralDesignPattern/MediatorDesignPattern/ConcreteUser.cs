@@ -1,5 +1,4 @@
-﻿using System;
-namespace MediatorDesignPattern
+﻿namespace MediatorDesignPattern
 {
     public class ConcreteUser : User
     {
@@ -8,11 +7,11 @@ namespace MediatorDesignPattern
         }
         public override void Receive(string message)
         {
-            Console.WriteLine(this.name + ": Received Message:" + message);
+            Console.WriteLine(name + ": Received Message:" + message);
         }
         public override void Send(string message)
         {
-            Console.WriteLine(this.name + ": Sending Message=" + message + "\n");
+            Console.WriteLine(name + ": Sending Message=" + message + "\n");
             mediator.SendMessage(message, this);
         }
     }

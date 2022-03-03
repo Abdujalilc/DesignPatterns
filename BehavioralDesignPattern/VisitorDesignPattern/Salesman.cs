@@ -1,7 +1,6 @@
-﻿using System;
-namespace VisitorDesignPattern
+﻿namespace VisitorDesignPattern
 {
-    class Salesman : IVisitor
+    internal class Salesman : IVisitor
     {
         public string Name { get; set; }
         public Salesman(string name)
@@ -11,7 +10,7 @@ namespace VisitorDesignPattern
         public void Visit(IElement element)
         {
             Kid kid = (Kid)element;
-            Console.WriteLine("Salesman: " + this.Name + " gave the school bag to the child: "
+            Console.WriteLine("Salesman: " + Name + " gave the school bag to the child: "
                             + kid.KidName);
         }
     }

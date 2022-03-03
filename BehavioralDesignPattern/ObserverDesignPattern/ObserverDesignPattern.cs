@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-namespace ObserverDesignPattern
+﻿namespace ObserverDesignPattern
 {
     public class Subject : ISubject
     {
-        private List<IObserver> observers = new List<IObserver>();
+        private readonly List<IObserver> observers = new List<IObserver>();
         private string ProductName { get; set; }
         private int ProductPrice { get; set; }
         private string Availability { get; set; }
@@ -21,7 +19,7 @@ namespace ObserverDesignPattern
         }
         public void setAvailability(string availability)
         {
-            this.Availability = availability;
+            Availability = availability;
             Console.WriteLine("Availability changed from Out of Stock to Available.");
             NotifyObservers();
         }

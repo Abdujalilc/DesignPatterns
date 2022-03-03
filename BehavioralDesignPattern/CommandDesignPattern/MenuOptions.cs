@@ -2,14 +2,14 @@
 {
     public class MenuOptions
     {
-        private ICommand openCommand;
-        private ICommand saveCommand;
-        private ICommand closeCommand;
+        private readonly ICommand openCommand;
+        private readonly ICommand saveCommand;
+        private readonly ICommand closeCommand;
         public MenuOptions(ICommand open, ICommand save, ICommand close)
         {
-            this.openCommand = open;
-            this.saveCommand = save;
-            this.closeCommand = close;
+            openCommand = open;
+            saveCommand = save;
+            closeCommand = close;
         }
         public void clickOpen()
         {

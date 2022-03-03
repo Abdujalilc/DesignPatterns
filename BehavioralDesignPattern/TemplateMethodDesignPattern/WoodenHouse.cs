@@ -1,5 +1,4 @@
-﻿using System;
-namespace TemplateMethodDesignPattern
+﻿namespace TemplateMethodDesignPattern
 {
     public class WoodenHouse : HouseTemplate
     {
