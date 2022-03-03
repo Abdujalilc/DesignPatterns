@@ -1,0 +1,1 @@
+﻿Add type names to List and call methods of that types by iterating.
