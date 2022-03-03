@@ -1,0 +1,14 @@
+﻿CareTaker has 'List<Memento> ledTvList'
+
+originator has 'LEDTV ledTV'
+
+Originator creates Memento CreateMemento()
+				return new Memento(ledTV)
+				
+CareTaker.AddMemento adds memento to List	
+ and writes Memento's details to Console
+ 
+So originator.ledTV gets value and loads to Memento.ledTV and  AddMemento adds Memento to  Caretaker.ledTvList with writing Details to console
+
+
+			
