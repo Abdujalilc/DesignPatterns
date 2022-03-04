@@ -1,0 +1,6 @@
+K.I.S.S. Definition: KEEP IT SIMPLE STUPID
+ 
+As described in the heading, KISS design pattern here stands for KEEP IT SIMPLE STUPID.
+ 
+This principle simply indicates that the simplest solution or path should be taken in a situation. This principle can be applied to any scenario, including many business activities, such as planning, management, and development.
+

@@ -1,0 +1,1 @@
+YAGNI stands for “you aren’t gonna need it”: don’t implement something until it is necessary.
