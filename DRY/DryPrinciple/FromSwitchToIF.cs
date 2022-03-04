@@ -1,6 +1,6 @@
 ﻿namespace DryPrinciple
 {
-    public class Class1
+    public class FromSwitchToIF
     {
         public String weekday1(int day)
         {
