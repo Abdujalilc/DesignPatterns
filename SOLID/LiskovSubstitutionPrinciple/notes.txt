@@ -1,0 +1,18 @@
+﻿When we have a base class and child class relationships i.e. inheritance relationships, then, if we can successfully replace the object/instance of a parent class with an object/instance of the child class, without affecting the behavior of the base class instance, then it is said to be in Liskov Substitution Principle.
+
+#region Without
+    public class Apple
+    {
+        public virtual string GetColor()
+        {
+            return "Red";
+        }
+    }
+    public class Orange : Apple
+    {
+        public override string GetColor()
+        {
+            return "Orange";
+        }
+    }
+#endregion Without

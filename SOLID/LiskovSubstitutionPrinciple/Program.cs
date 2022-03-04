@@ -23,21 +23,3 @@ public class Orange : Fruit
     }
 }
 #endregion With
-#region Without
-/*
-    public class Apple
-    {
-        public virtual string GetColor()
-        {
-            return "Red";
-        }
-    }
-    public class Orange : Apple
-    {
-        public override string GetColor()
-        {
-            return "Orange";
-        }
-    }
-*/
-#endregion Without
