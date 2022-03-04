@@ -1,5 +1,5 @@
 ﻿using System.Net.Mail;
-namespace SOLID_PRINCIPLES.SRP
+namespace SingleResponsibilityPrinciple
 {
     public class Invoice
     {

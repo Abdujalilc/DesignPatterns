@@ -1,4 +1,4 @@
-﻿namespace SOLID_PRINCIPLES.SRP
+﻿namespace SingleResponsibilityPrinciple
 {
     public class MailSender
     {
