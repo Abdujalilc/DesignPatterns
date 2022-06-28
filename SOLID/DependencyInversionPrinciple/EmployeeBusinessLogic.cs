@@ -11,6 +11,7 @@
         }
         public Employee GetEmployeeDetails(int id)
         {
+            // GetEmployeeDetails is constructor method.
             return _EmployeeDataAccess.GetEmployeeDetails(id);
         }
     }

@@ -4,11 +4,11 @@ Console.WriteLine(fruit.GetColor());
 fruit = new Apple();
 Console.WriteLine(fruit.GetColor());
 
-#region With
 public abstract class Fruit
 {
     public abstract string GetColor();
 }
+
 public class Apple : Fruit
 {
     public override string GetColor()
@@ -16,6 +16,7 @@ public class Apple : Fruit
         return "Red";
     }
 }
+
 public class Orange : Fruit
 {
     public override string GetColor()
@@ -23,4 +24,3 @@ public class Orange : Fruit
         return "Orange";
     }
 }
-#endregion With

@@ -1,6 +1,6 @@
-﻿We have a base class and child class relationships.
+﻿	We have a base class and child class relationships.
 
-We must be able replace an instance of the child class, 
-without affecting the behavior of the base class instance. 
+	We must be able replace an instance of the child class, 
+	without affecting the behavior of the base class instance. 
 
-That is said to be an Liskov Substitution Principle.
+	That is said to be an Liskov Substitution Principle.
