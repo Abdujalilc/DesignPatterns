@@ -8,5 +8,5 @@
 
 ----------------
 
-//This is good: 
+//good example: 
 public class HPLaserJetPrinter : IPrinterTasks, IFaxTasks, IPrintDuplexTasks ...

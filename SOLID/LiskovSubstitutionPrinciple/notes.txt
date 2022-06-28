@@ -3,23 +3,4 @@
 We must be able replace an instance of the child class, 
 without affecting the behavior of the base class instance. 
 
-That is said to be in Liskov Substitution Principle.
-
---------------------------------
-
-#region Without
-    public class Apple
-    {
-        public virtual string GetColor()
-        {
-            return "Red";
-        }
-    }
-    public class Orange : Apple
-    {
-        public override string GetColor()
-        {
-            return "Orange";
-        }
-    }
-#endregion Without
+That is said to be an Liskov Substitution Principle.

@@ -1,6 +1,9 @@
 ﻿namespace DependencyInversionPrinciple
 {
-    public class EmployeeDataAccess : IEmployeeDataAccess
+    public interface test { 
+
+    }
+    public class EmployeeDataAccess : IEmployeeDataAccess, test
     {
         public Employee GetEmployeeDetails(int id)
         {

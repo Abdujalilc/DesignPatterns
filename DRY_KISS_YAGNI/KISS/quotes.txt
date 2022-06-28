@@ -1,5 +1,9 @@
 "Everything should be made as simple as possible, but not simpler." - Albert Einstein
+
 “Less is more” - Ludwig Mies Van Der Rohe’s
+
 “Make Simple Tasks Simple!” - Bjarne Stroustrup’s
+
 “It seems that perfection is not reached when there is nothing left to add but when there is nothing left to take away.”
+
 “The simplest solution is most likely the correct solution”

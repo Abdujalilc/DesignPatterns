@@ -1,25 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DependencyInversionPrinciple
+﻿namespace DependencyInversionPrinciple
 {
     public class DataAccessFactory
     {
+        //not public static EmployeeDataAccess GetEmployeeDataAccessObj()
         public static IEmployeeDataAccess GetEmployeeDataAccessObj()
         {
+            //this returns a new instance of EmployeeDataAccess object.
             return new EmployeeDataAccess();
         }
     }
-    /*
-     public class DataAccessFactory
-    {
-        public static EmployeeDataAccess GetEmployeeDataAccessObj()
-        {
-            return new EmployeeDataAccess();
-        }
-    }
-     */
 }
