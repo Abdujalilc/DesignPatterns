@@ -1,5 +1,6 @@
 ﻿Fruit fruit = new Orange();
 Console.WriteLine(fruit.GetColor());
+
 fruit = new Apple();
 Console.WriteLine(fruit.GetColor());
 

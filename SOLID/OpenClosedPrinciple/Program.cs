@@ -1,4 +1,5 @@
 ﻿using OpenClosedPrinciple;
+
 #region Correct
 InvoiceWith FInvoice = new FinalInvoice();
 InvoiceWith PInvoice = new ProposedInvoice();
@@ -13,4 +14,5 @@ double RInvoiceAmount = RInvoice.GetInvoiceDiscount(10000);
 InvoiceWithout invoiceWithout = new InvoiceWithout();
 invoiceWithout.GetInvoiceDiscount(10000,InvoiceType.ProposedInvoice);
 #endregion
+
 Console.ReadKey();

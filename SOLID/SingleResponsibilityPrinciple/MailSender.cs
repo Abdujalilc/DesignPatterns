@@ -9,6 +9,7 @@
         public void SendEmail()
         {
             // Here we need to write the Code for sending the mail
+            Console.WriteLine("Email is sent :)\n");
         }
     }
 }

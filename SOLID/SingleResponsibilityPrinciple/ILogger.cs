@@ -16,14 +16,17 @@
         public void Info(string info)
         {
             // here we need to write the Code for info information into the ErrorLog text file
+            Console.WriteLine(info);
         }
         public void Debug(string info)
         {
             // here we need to write the Code for Debug information into the ErrorLog text file
+            Console.WriteLine(info);
         }
         public void Error(string message, Exception ex)
         {
             // here we need to write the Code for Error information into the ErrorLog text file
+            Console.WriteLine($"{message}  {ex.Message}");
         }
     }
 }
