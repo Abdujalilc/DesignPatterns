@@ -1,4 +1,5 @@
 ﻿The Interface Segregation Principle states that 
+
 	"Clients should not be forced to implement any methods they don’t use. 
 
 	Rather than one fat interface, 

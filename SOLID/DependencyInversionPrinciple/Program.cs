@@ -16,7 +16,6 @@ namespace DependencyInversionPrinciple
 
             Console.WriteLine(JsonSerializer.Serialize(test));
             Console.ReadLine();
-        }      
-
+        } 
     }
 }
