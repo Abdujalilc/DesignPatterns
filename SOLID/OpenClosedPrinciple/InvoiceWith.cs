@@ -7,7 +7,6 @@
             return amount - 10;
         }
     }
-
     public class FinalInvoice : InvoiceWith
     {
         public override double GetInvoiceDiscount(double amount)
@@ -20,13 +19,6 @@
         public override double GetInvoiceDiscount(double amount)
         {
             return base.GetInvoiceDiscount(amount) - 40;
-        }
-    }
-    public class RecurringInvoice : InvoiceWith
-    {
-        public override double GetInvoiceDiscount(double amount)
-        {
-            return base.GetInvoiceDiscount(amount) - 30;
         }
     }
 }
