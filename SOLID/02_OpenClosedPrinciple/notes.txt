@@ -3,3 +3,11 @@
 	"Software entities such as modules, classes, functions, etc. 
 	should be open for extension, 
 	but closed for modification".
+
+--------------------------------------
+
+It means:
+Open for extension → You can add new functionality.
+Closed for modification → You should not change existing code.
+
+✅ Good approach: Use abstraction (e.g., interfaces, base classes) so new features can be added without modifying existing code.
