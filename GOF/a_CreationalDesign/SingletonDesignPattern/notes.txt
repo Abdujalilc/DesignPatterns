@@ -1,0 +1,8 @@
+Singleton Pattern →
+🔹 Ensures only one instance of a class exists
+🔹 Provides global access to the instance
+
+Example:
+Singleton obj = Singleton.Instance; // Accesses the single instance
+
+✔️ Key Idea: Controlled, single-instance management! 
