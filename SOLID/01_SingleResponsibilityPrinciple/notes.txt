@@ -2,3 +2,5 @@
 
 !!! each class should have only one responsibility to do.
 
+bitta class bir necha vazifani bajarmasin.
+

@@ -14,3 +14,5 @@ Open for extension → You can add new functionality.
 Closed for modification → You should not change existing code.
 
 ✅ Good approach: Use abstraction (e.g., interfaces, base classes) so new features can be added without modifying existing code.
+
+claslarni ichi ozgarmasin balki soni kopaysin

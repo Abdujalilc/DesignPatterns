@@ -9,3 +9,5 @@ Good:	Separate interfaces: IWorkable (for working), IEatable (for eating).
 
 ///Segregation - Разделение
 
+katta interfeyslarni mayda interfeyslarga bo'lib tashlash kerak.
+

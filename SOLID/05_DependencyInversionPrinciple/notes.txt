@@ -3,4 +3,7 @@
 !!! Use interfaces for flexibility
 
 In DIP, it means reversing dependency flow!
+
 В DIP это означает обратный поток зависимостей!
+
+klass konkret klasga emas balki abstrakt klasga qaram bolsin
