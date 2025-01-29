@@ -18,10 +18,12 @@
                 Console.WriteLine("Processing credit card payment");
             else if (type == "PayPal")
                 Console.WriteLine("Processing PayPal payment");
+            // ❌ Violates OCP: Adding a new payment method requires modifying this method
         }
     }
 }
+
 /*
- Why is this bad?
-❌ Violates OCP → If you add a new payment method, you must modify ProcessPayment, breaking existing code.
+ * Why is this bad?
+ * ❌ Violates OCP → If you add a new payment method, you must modify ProcessPayment, breaking existing code.
  */

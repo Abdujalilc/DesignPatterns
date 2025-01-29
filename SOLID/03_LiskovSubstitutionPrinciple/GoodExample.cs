@@ -8,26 +8,24 @@
             Bird penguin = new Penguin();
 
             sparrow.Move();
-            penguin.Move();
+            penguin.Move(); // Both objects behave correctly without breaking substitution
         }
     }
-
     public abstract class Bird
     {
-        public abstract void Move();
+        public abstract void Move(); // Abstract method ensures each subclass defines its own movement
     }
-
     public class Sparrow : Bird
     {
         public override void Move() => Console.WriteLine("Flying");
     }
-
     public class Penguin : Bird
     {
-        public override void Move() => Console.WriteLine("Swimming");
+        public override void Move() => Console.WriteLine("Swimming"); // No unexpected behavior or misuse of base class methods
     }
 }
+
 /*
  * Why is this good?
- * Because each bird moves in a way that matches its nature without breaking behavior.
+ * ✅ Follows LSP → Each bird moves in a way that matches its nature without breaking behavior.
  */

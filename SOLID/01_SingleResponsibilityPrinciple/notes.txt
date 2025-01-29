@@ -1,4 +1,4 @@
-﻿!!!each module or class should have only one responsibility
+﻿!!! a class should have only one reason to change
 
 The Single Responsibility Principle in C# states that: 
 

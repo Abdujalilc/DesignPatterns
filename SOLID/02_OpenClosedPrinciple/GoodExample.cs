@@ -10,12 +10,12 @@
             IPayment payPalPayment = new PayPalPayment();
 
             processor.ProcessPayment(creditCardPayment);
-            processor.ProcessPayment(payPalPayment);
+            processor.ProcessPayment(payPalPayment); // New payment methods can be added without modifying PaymentProcessor
         }
     }
     public interface IPayment
     {
-        void Process();
+        void Process(); // Defines a contract for all payment methods
     }
     public class CreditCardPayment : IPayment
     {
@@ -27,10 +27,10 @@
     }
     public class PaymentProcessor
     {
-        public void ProcessPayment(IPayment payment) => payment.Process();
+        public void ProcessPayment(IPayment payment) => payment.Process(); // Uses abstraction to allow extension
     }
 }
 /*
- Why is this good?
-Because you can add new payment methods (e.g., CryptoPayment) without modifying PaymentProcessor.
+ * Why is this good?
+ * ✅ Follows OCP → You can add new payment methods (e.g., CryptoPayment) without modifying PaymentProcessor.
  */
