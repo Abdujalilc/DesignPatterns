@@ -1,3 +1,5 @@
-﻿Abstract Factory Pattern → 
-	Provides an interface to create related objects without specifying their exact classes. 
-	Used to maintain consistency in object families.
+﻿Abstract Factory Pattern →
+🔹 Creates related objects using interfaces, not exact classes.
+🔹 Ensures consistency in object families.
+
+✔️ Key idea: Client code relies on interfaces, making it independent of specific implementations.

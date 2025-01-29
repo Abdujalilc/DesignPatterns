@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingletonDesignPattern", "SingletonDesignPattern\SingletonDesignPattern.csproj", "{B0ED9C6B-8159-4ADF-ABA9-3995604A0B1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingletonDP", "SingletonDesignPattern\SingletonDP.csproj", "{B0ED9C6B-8159-4ADF-ABA9-3995604A0B1E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FactoryDesignPattern", "FactoryDesignPattern\FactoryDesignPattern.csproj", "{4DD76166-EFD4-4DC2-BB73-A8E29E4D2E55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FactoryDP", "FactoryDesignPattern\FactoryDP.csproj", "{4DD76166-EFD4-4DC2-BB73-A8E29E4D2E55}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactoryDesignPattern", "AbstractFactoryDesignPattern\AbstractFactoryDesignPattern.csproj", "{3BA8CA86-093B-425C-B92A-158E3558EEE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactoryDP", "AbstractFactoryDesignPattern\AbstractFactoryDP.csproj", "{3BA8CA86-093B-425C-B92A-158E3558EEE5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuilderDesignPattern", "BuilderDesignPattern\BuilderDesignPattern.csproj", "{F46EF209-1A04-4CFF-9FEB-38279276A91A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuilderDP", "BuilderDesignPattern\BuilderDP.csproj", "{F46EF209-1A04-4CFF-9FEB-38279276A91A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototypeDesignPattern", "PrototypeDesignPattern\PrototypeDesignPattern.csproj", "{25781E35-3E8C-4470-B530-06C132E65DBD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototypeDP", "PrototypeDesignPattern\PrototypeDP.csproj", "{25781E35-3E8C-4470-B530-06C132E65DBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

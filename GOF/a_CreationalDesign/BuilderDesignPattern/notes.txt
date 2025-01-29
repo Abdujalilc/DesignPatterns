@@ -1,0 +1,9 @@
+Builder Pattern →
+🔹 Separates construction from representation
+🔹 Allows step-by-step creation
+🔹 Supports different representations while keeping the process uniform
+
+Example:
+Product product = builder.BuildPartOne().BuildPartTwo()/*constructions*/.GetResult()/*representation*/;
+
+✔️ Key Idea: Controlled, flexible object creation!
