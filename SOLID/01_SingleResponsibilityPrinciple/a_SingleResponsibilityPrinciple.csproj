@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>GoodExample</StartupObject>
+    <StartupObject>SRP.GoodExample.Program</StartupObject>
   </PropertyGroup>
 
 </Project>
