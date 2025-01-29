@@ -1,14 +1,9 @@
-﻿The Interface Segregation Principle states that 
+﻿!!!Don't force classes to implement what they don’t need.
 
-	"Clients should not be forced to implement any methods they don’t use. 
+!!!Keep interfaces small and focused.
 
-	Rather than one fat interface, 
-	numerous little interfaces are preferred 
-	based on groups of methods 
-	with each interface serving one submodule".
+Bad:	A robot must implement Eat() even though it doesn’t eat.
 
-----------------
+Good:	Separate interfaces: IWorkable (for working), IEatable (for eating). 
+		Now, robots only work, and humans both work & eat.
 
-//good example: 
-
-public class HPLaserJetPrinter : IPrinterTasks, IFaxTasks, IPrintDuplexTasks ...
