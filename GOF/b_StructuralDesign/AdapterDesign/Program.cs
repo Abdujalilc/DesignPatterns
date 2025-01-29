@@ -1,24 +1,26 @@
-﻿using System;
+﻿// Adapter Pattern → Bridges incompatible interfaces without modifying existing code.
 
-namespace AdapterDesignPattern
+using System;
+
+public interface ITarget { void Request(); } // Expected interface
+
+public class Adaptee
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            string[,] employeesArray = new string[5, 4]
-            {
-                {"101","John","SE","10000"},
-                {"102","Smith","SE","20000"},
-                {"103","Dev","SSE","30000"},
-                {"104","Pam","SE","40000"},
-                {"105","Sara","SSE","50000"}
-            };
+    public void SpecificRequest() => Console.WriteLine("Adaptee's behavior adapted");
+}
 
-            ITarget target = new EmployeeAdapter();
-            Console.WriteLine("HR system passes employee string array to Adapter\n");
-            target.ProcessCompanySalary(employeesArray);
-            Console.Read();
-        }
+public class Adapter : ITarget
+{
+    private readonly Adaptee _adaptee = new(); // Holds reference to existing implementation
+    public void Request() => _adaptee.SpecificRequest(); // Adapts to expected interface
+}
+
+// Client
+class Program
+{
+    static void Main()
+    {
+        ITarget adapter = new Adapter();
+        adapter.Request(); // Output: Adaptee's behavior adapted
     }
 }
