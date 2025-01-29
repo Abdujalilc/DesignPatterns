@@ -3,10 +3,7 @@ Adapter Pattern →
 🔹 Allows seamless integration of different systems
 
 Example:
-
-csharp
-Copy
-Edit
 ITarget adapter = new Adapter();  
 adapter.Request(); // Adapts to expected interface  
+
 ✔️ Key Idea: Converts existing functionality for compatibility!

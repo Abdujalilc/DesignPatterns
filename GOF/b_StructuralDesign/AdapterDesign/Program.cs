@@ -1,8 +1,10 @@
 ﻿// Adapter Pattern → Bridges incompatible interfaces without modifying existing code.
-
 using System;
 
-public interface ITarget { void Request(); } // Expected interface
+public interface ITarget// Expected interface
+{
+    void Request();
+} 
 
 public class Adaptee
 {
@@ -11,7 +13,7 @@ public class Adaptee
 
 public class Adapter : ITarget
 {
-    private readonly Adaptee _adaptee = new(); // Holds reference to existing implementation
+    private readonly Adaptee _adaptee = new Adaptee(); // Holds reference to existing implementation
     public void Request() => _adaptee.SpecificRequest(); // Adapts to expected interface
 }
 
