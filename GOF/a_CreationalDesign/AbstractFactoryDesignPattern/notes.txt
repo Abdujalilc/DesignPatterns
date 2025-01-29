@@ -1,1 +1,3 @@
-﻿
+﻿Abstract Factory Pattern → 
+	Provides an interface to create related objects without specifying their exact classes. 
+	Used to maintain consistency in object families.

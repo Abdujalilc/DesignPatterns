@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactoryDesignPatter
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuilderDesignPattern", "BuilderDesignPattern\BuilderDesignPattern.csproj", "{F46EF209-1A04-4CFF-9FEB-38279276A91A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentInterfaceDesignPattern", "FluentInterfaceDesignPattern\FluentInterfaceDesignPattern.csproj", "{19743CFF-9EC7-427D-BC18-786B669EBB3C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototypeDesignPattern", "PrototypeDesignPattern\PrototypeDesignPattern.csproj", "{25781E35-3E8C-4470-B530-06C132E65DBD}"
 EndProject
 Global
@@ -37,10 +35,6 @@ Global
 		{F46EF209-1A04-4CFF-9FEB-38279276A91A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F46EF209-1A04-4CFF-9FEB-38279276A91A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F46EF209-1A04-4CFF-9FEB-38279276A91A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{19743CFF-9EC7-427D-BC18-786B669EBB3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{19743CFF-9EC7-427D-BC18-786B669EBB3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{19743CFF-9EC7-427D-BC18-786B669EBB3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{19743CFF-9EC7-427D-BC18-786B669EBB3C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{25781E35-3E8C-4470-B530-06C132E65DBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{25781E35-3E8C-4470-B530-06C132E65DBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25781E35-3E8C-4470-B530-06C132E65DBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
