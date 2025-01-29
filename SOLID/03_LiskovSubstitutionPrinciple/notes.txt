@@ -1,6 +1,5 @@
-﻿	We have a base class and child class relationships.
+﻿	!!! If a child class replaces its parent class, everything should still work correctly.
 
-	We must be able replace an instance of the child class, 
-	without affecting the behavior of the base class instance. 
 
-	That is said to be an Liskov Substitution Principle.
+	!!! Don't force things to fit where they don't belong. 
+		If an object replaces another, it should work naturally.

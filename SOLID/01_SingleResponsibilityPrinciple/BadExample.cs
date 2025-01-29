@@ -1,26 +1,29 @@
-﻿using System;
-using System.IO;
-
-class BadExample
+﻿namespace SRP.BadExample
 {
-    static void Main()
+    class Program
     {
-        UserManager2 userManager2 = new UserManager2();
-        userManager2.AddUser("John Doe");
-        userManager2.SaveToFile("John Doe");
+        static void Main()
+        {
+            UserManager userManager = new UserManager();
+            userManager.AddUser("John Doe");
+            userManager.SaveToFile("John Doe");
+        }
+    }
+    class UserManager
+    {
+        public void AddUser(string name)
+        {
+            Console.WriteLine($"User {name} added.");
+        }
+
+        public void SaveToFile(string data)
+        {
+            File.WriteAllText("users.txt", data);
+            Console.WriteLine("Data saved to file.");
+        }
     }
 }
-
-class UserManager2
-{
-    public void AddUser(string name)
-    {
-        Console.WriteLine($"User {name} added.");
-    }
-
-    public void SaveToFile(string data)
-    {
-        File.WriteAllText("users.txt", data);
-        Console.WriteLine("Data saved to file.");
-    }
-}
+/*
+ * Why is this bad?
+ * Because UserManager mixes user logic and file handling.
+ */
