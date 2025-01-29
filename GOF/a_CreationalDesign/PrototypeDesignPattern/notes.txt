@@ -1,1 +1,10 @@
-﻿type referencing
+﻿!!!object duplication
+
+Prototype Pattern →
+🔹 Creates object copies without knowing their exact class
+🔹 Avoids reinitialization, improving efficiency
+
+Example:
+Product clone = (Product)original.Clone(); // Creates a duplicate
+
+✔️ Key Idea: Efficient object duplication!

@@ -1,1 +1,10 @@
-﻿Getting child by Interface and call child methods
+﻿Factory Pattern →
+🔹 Creates objects without specifying exact classes
+🔹 Centralizes object creation logic
+🔹 Ensures flexibility and consistency in object instantiation
+
+Example:
+IProduct product = Factory.CreateProduct("A")/*decides object*/;
+product.Show()/*uses object*/;
+
+✔️ Key Idea: Encapsulates object creation, keeping client code simple!

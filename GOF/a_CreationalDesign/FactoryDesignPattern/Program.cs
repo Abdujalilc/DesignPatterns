@@ -1,33 +1,28 @@
-﻿using FactoryDesignPattern;
-
-//Generally we will get the Card Type from UI.
-//Here we are hardcoded the card type
-
-
-string cardType = "MoneyBack";
-CreditCard? cardDetails = null;
-//Based of the CreditCard Type we are creating the
-//appropriate type instance using if else condition
-if (cardType == "MoneyBack")
+﻿// Factory Pattern → Creates objects using interfaces without specifying exact classes.
+public interface IProduct// Common interface for all products
 {
-    cardDetails = new MoneyBack();
+    void Show();
 }
-else if (cardType == "Titanium")
+public class ProductA : IProduct
 {
-    cardDetails = new Titanium();
+    public void Show() => Console.WriteLine("Product A created");
 }
-else if (cardType == "Platinum")
+public class ProductB : IProduct
 {
-    cardDetails = new Platinum();
+    public void Show() => Console.WriteLine("Product B created");
 }
-if (cardDetails != null)
+public class Factory
 {
-    Console.WriteLine("CardType : " + cardDetails.GetCardType());
-    Console.WriteLine("CreditLimit : " + cardDetails.GetCreditLimit());
-    Console.WriteLine("AnnualCharge :" + cardDetails.GetAnnualCharge());
+    public static IProduct CreateProduct(string type) =>
+        type == "A" ? new ProductA() : new ProductB(); // Decides which product to create
 }
-else
+// Client
+class Program
 {
-    Console.Write("Invalid Card Type");
+    static void Main()
+    {
+        IProduct product = Factory.CreateProduct("A"); // Requests a specific product
+        product.Show(); // Output: Product A created
+        Console.ReadLine(); ///just keep console open
+    }
 }
-Console.ReadLine();
