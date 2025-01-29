@@ -1,5 +1,3 @@
-https://dotnettutorials.net/course/solid-design-principles/
-
 SOLID Acronym:
 	S stands for the Single Responsibility Principle which is also known as SRP.
 	O stands for the Open-Closed Principle which is also known as OSP.

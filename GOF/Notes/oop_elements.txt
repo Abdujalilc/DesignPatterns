@@ -1,0 +1,13 @@
+OOP elements:
+
+	Classes → Blueprints for objects
+	Objects → Instances of classes
+	Interfaces → Define contracts for classes
+	Abstract Classes → Partially implemented classes
+	Constructors → Special methods for object initialization
+	Destructors → Cleanup logic before an object is removed
+	Methods → Define behaviors of a class
+	Properties → Encapsulated fields with getters/setters
+	Fields → Store data within a class
+	Static Members → Shared across all instances
+	Access Modifiers → Control visibility (public, private, etc.)

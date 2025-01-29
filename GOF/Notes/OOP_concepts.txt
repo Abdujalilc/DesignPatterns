@@ -1,8 +1,15 @@
 OOP concepts: 
-Abstraction
-Inheritance
-Polymorphism
-Encapsulation
-Interfaces
-Classes
-Abstract classes
+	Abstraction
+	Encapsulation
+	Inheritance
+	Polymorphism
+	
+--------------------------------------------------
+
+1️. Abstraction → Hides complex details, showing only essential features. (e.g., using List.Add() without knowing internal implementation.)
+
+2️. Encapsulation → Restricts direct access to data, allowing controlled modification via methods. (e.g., private fields with public getters/setters.)
+
+3️. Inheritance → Allows a class to derive properties and behaviors from another class. (e.g., Car inherits from Vehicle.)
+
+4. Polymorphism → Enables a single interface to represent multiple implementations. (e.g., method overriding in derived classes.)
