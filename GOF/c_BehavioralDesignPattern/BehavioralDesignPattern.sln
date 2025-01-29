@@ -3,27 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IteratorDesignPattern", "IteratorDesignPattern\IteratorDesignPattern.csproj", "{893AF7CC-4DC7-4A26-A417-246510E314DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IteratorDP", "IteratorDesignPattern\IteratorDP.csproj", "{893AF7CC-4DC7-4A26-A417-246510E314DE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObserverDesignPattern", "ObserverDesignPattern\ObserverDesignPattern.csproj", "{47C2E2B6-350C-4721-A32D-71F559886D88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObserverDP", "ObserverDesignPattern\ObserverDP.csproj", "{47C2E2B6-350C-4721-A32D-71F559886D88}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChainOfResponsibilityDesignPattern", "ChainOfResponsibilityDesignPattern\ChainOfResponsibilityDesignPattern.csproj", "{84DC093C-0636-4047-80DB-DD1E91466366}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChainOfResponsibilityDP", "ChainOfResponsibilityDesignPattern\ChainOfResponsibilityDP.csproj", "{84DC093C-0636-4047-80DB-DD1E91466366}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterpreterDesignPattern", "InterpreterDesignPattern\InterpreterDesignPattern.csproj", "{077BBF26-FC68-421E-88DE-BF89F0AB500D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterpreterDP", "InterpreterDesignPattern\InterpreterDP.csproj", "{077BBF26-FC68-421E-88DE-BF89F0AB500D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandDesignPattern", "CommandDesignPattern\CommandDesignPattern.csproj", "{B5B66335-D4B8-4878-AA88-21BCC5BB030F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandDP", "CommandDesignPattern\CommandDP.csproj", "{B5B66335-D4B8-4878-AA88-21BCC5BB030F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MementoDesignPattern", "MementoDesignPattern\MementoDesignPattern.csproj", "{48DA56F2-5CD3-415A-A0E5-3FE36E8B5B72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MementoDP", "MementoDesignPattern\MementoDP.csproj", "{48DA56F2-5CD3-415A-A0E5-3FE36E8B5B72}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatorDesignPattern", "MediatorDesignPattern\MediatorDesignPattern.csproj", "{4D83D150-74F1-4B34-9566-869DA566A5FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatorDP", "MediatorDesignPattern\MediatorDP.csproj", "{4D83D150-74F1-4B34-9566-869DA566A5FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateDesignPattern", "StateDesignPattern\StateDesignPattern.csproj", "{8EC0EDBE-89D3-4EFA-BDB5-EF2778921B4F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateDP", "StateDesignPattern\StateDP.csproj", "{8EC0EDBE-89D3-4EFA-BDB5-EF2778921B4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateMethodDesignPattern", "TemplateMethodDesignPattern\TemplateMethodDesignPattern.csproj", "{7D4B7F81-A90B-4A11-9F1D-276CB5A570CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateMethodDP", "TemplateMethodDesignPattern\TemplateMethodDP.csproj", "{7D4B7F81-A90B-4A11-9F1D-276CB5A570CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyDesignPattern", "StrategyDesignPattern\StrategyDesignPattern.csproj", "{62979F64-5A26-478D-A97D-5DC98312BE1E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyDP", "StrategyDesignPattern\StrategyDP.csproj", "{62979F64-5A26-478D-A97D-5DC98312BE1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisitorDesignPattern", "VisitorDesignPattern\VisitorDesignPattern.csproj", "{A8ABF94D-27CD-496A-9DCD-8EC1AD02EC83}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisitorDP", "VisitorDesignPattern\VisitorDP.csproj", "{A8ABF94D-27CD-496A-9DCD-8EC1AD02EC83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
