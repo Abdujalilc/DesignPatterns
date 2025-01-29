@@ -1,3 +1,6 @@
 ﻿!!! Depend on abstractions, not concrete classes.
 
 !!! Use interfaces for flexibility
+
+In DIP, it means reversing dependency flow!
+В DIP это означает обратный поток зависимостей!

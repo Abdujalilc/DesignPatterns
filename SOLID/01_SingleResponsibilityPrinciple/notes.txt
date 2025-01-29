@@ -1,8 +1,4 @@
 ﻿!!! a class should have only one reason to change
 
-The Single Responsibility Principle in C# states that: 
-
-	Each software module or class should have only one reason to change. 
-
-	We can say that each module or class should have only one responsibility to do.
+!!! each class should have only one responsibility to do.
 

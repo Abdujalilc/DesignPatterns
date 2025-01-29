@@ -1,4 +1,4 @@
-﻿!!!Don't force classes to implement what they don’t need.
+﻿!!!Don't force classes to implement what they don’t need to.
 
 !!!Keep interfaces small and focused.
 
@@ -6,4 +6,6 @@ Bad:	A robot must implement Eat() even though it doesn’t eat.
 
 Good:	Separate interfaces: IWorkable (for working), IEatable (for eating). 
 		Now, robots only work, and humans both work & eat.
+
+///Segregation - Разделение
 
