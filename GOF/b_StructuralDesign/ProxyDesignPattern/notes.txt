@@ -1,0 +1,9 @@
+Proxy Pattern →
+🔹 Controls access to an object (lazy loading, logging, security).
+🔹 Acts as an intermediary to add extra functionality.
+
+Example:
+IService service = new ServiceProxy();
+service.Request(); // Proxy logs and delegates to RealService
+
+✔️ Key Idea: Adds control & functionality without modifying the real object.
