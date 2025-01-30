@@ -1,28 +1,30 @@
-﻿// Adapter Pattern → Bridges incompatible interfaces without modifying existing code.
-using System;
-
-public interface ITarget// Expected interface
+﻿using System;
+public interface ITarget
 {
     void Request();
-} 
-
+}
 public class Adaptee
 {
-    public void SpecificRequest() => Console.WriteLine("Adaptee's behavior adapted");
+    private string _log = "Initial";
+    private int _count = 0;
+    public void SpecificRequest()
+    {
+        _count++;
+        _log += " -> Request #" + _count;
+        Console.WriteLine($"Adaptee log: {_log}");
+    }
 }
-
 public class Adapter : ITarget
 {
-    private readonly Adaptee _adaptee = new Adaptee(); // Holds reference to existing implementation
-    public void Request() => _adaptee.SpecificRequest(); // Adapts to expected interface
+    private readonly Adaptee _adaptee = new Adaptee(); // Single instance
+    public void Request() => _adaptee.SpecificRequest();
 }
-
-// Client
 class Program
 {
     static void Main()
     {
         ITarget adapter = new Adapter();
-        adapter.Request(); // Output: Adaptee's behavior adapted
+        adapter.Request(); // Output: Adaptee log: Initial ->  Request #1
+        adapter.Request(); // Output: Adaptee log: Initial -> Request #1 -> Request #2
     }
 }

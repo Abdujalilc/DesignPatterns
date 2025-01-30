@@ -1,0 +1,21 @@
+Bridge Pattern →
+🔹 Decouples abstraction from implementation for flexibility
+🔹 Enables independent development of both sides
+
+Example:
+Device tv = new TV(new BasicRemote());  
+tv.Operate(); // Uses remote without being tightly coupled  
+
+✔️ Key Idea: Separates interface from implementation to allow easy extension!
+
+-----------------------------------------------------
+
+Паттерн Мост →
+🔹 Отделяет абстракцию от реализации для гибкости
+🔹 Позволяет независимо развивать обе стороны
+
+Пример:
+Device tv = new TV(new BasicRemote());  
+tv.Operate(); // Использует пульт без жесткой связи  
+
+✔️ Ключевая идея: Разделяет интерфейс и реализацию, упрощая расширение!
