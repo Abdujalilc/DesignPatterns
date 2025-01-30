@@ -1,20 +1,29 @@
-﻿using System;
-namespace DecoratorDesignPattern
+﻿interface IMessage
 {
-    class Program
+    string GetContent();
+}
+class TextMessage(string content) : IMessage
+{
+    public string GetContent() => content;
+}
+abstract class MessageDecorator(IMessage msg) : IMessage
+{
+    protected IMessage _msg = msg; 
+    public abstract string GetContent();
+}
+class EncryptedMessage(IMessage msg) : MessageDecorator(msg)
+{
+    public override string GetContent() => $"[Encrypted] {_msg.GetContent()}";
+}
+class HtmlMessage(IMessage msg) : MessageDecorator(msg)
+{
+    public override string GetContent() => $"<html>{_msg.GetContent()}</html>";
+}
+class Program
+{
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            ICar bmwCar1 = new BMWCar();
-            bmwCar1.ManufactureCar();
-            Console.WriteLine(bmwCar1 + "\n");
-            DieselCarDecorator carWithDieselEngine = new DieselCarDecorator(bmwCar1);
-            carWithDieselEngine.ManufactureCar();
-            Console.WriteLine();
-            ICar bmwCar2 = new BMWCar();
-            PetrolCarDecorator carWithPetrolEngine = new PetrolCarDecorator(bmwCar2);
-            carWithPetrolEngine.ManufactureCar();
-            Console.ReadKey();
-        }
+        IMessage msg = new HtmlMessage(new EncryptedMessage(new TextMessage("Hello, World!")));
+        Console.WriteLine(msg.GetContent()); // <html>[Encrypted] Hello, World!</html>
     }
 }
