@@ -1,43 +1,28 @@
-﻿using FlyweightDesignPattern;
-
-Console.WriteLine("\n Red color Circles ");
-for (int i = 0; i < 3; i++)
+﻿interface IShape { 
+    void Draw(string color); } // Flyweight Interface
+class Circle : IShape // Concrete Flyweight: Shared object
 {
-    Circle circle = (Circle)ShapeFactory.GetShape("circle");
-    circle.SetColor("Red");
-    circle.Draw();
+    public void Draw(string color) => Console.WriteLine($"Drawing {color} circle.");
 }
-
-Console.WriteLine("\n Green color Circles ");
-for (int i = 0; i < 3; i++)
+class ShapeFactory // Flyweight Factory: Manages object reuse
 {
-    Circle circle = (Circle)ShapeFactory.GetShape("circle");
-    circle.SetColor("Green");
-    circle.Draw();
-}
+    private static readonly Dictionary<string, IShape> _shapes = new Dictionary<string, IShape>();
 
-Console.WriteLine("\n Blue color Circles");
-for (int i = 0; i < 3; ++i)
+    public static IShape GetCircle()
+    {
+        if (!_shapes.ContainsKey("circle"))
+            _shapes["circle"] = new Circle();
+        return _shapes["circle"];
+    }
+}
+class Program
 {
-    Circle circle = (Circle)ShapeFactory.GetShape("circle");
-    circle.SetColor("Green");
-    circle.Draw();
-}
+    static void Main()
+    {
+        IShape shape1 = ShapeFactory.GetCircle();
+        shape1.Draw("Red");
 
-Console.WriteLine("\n Orange color Circles");
-for (int i = 0; i < 3; ++i)
-{
-    Circle circle = (Circle)ShapeFactory.GetShape("circle");
-    circle.SetColor("Orange");
-    circle.Draw();
+        IShape shape2 = ShapeFactory.GetCircle();
+        shape2.Draw("Blue"); // Same object, different color
+    }
 }
-
-Console.WriteLine("\n Black color Circles");
-for (int i = 0; i < 3; ++i)
-{
-    Circle circle = (Circle)ShapeFactory.GetShape("circle");
-    circle.SetColor("Black");
-    circle.Draw();
-}
-
-Console.ReadKey();

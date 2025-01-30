@@ -1,0 +1,12 @@
+Flyweight Pattern →
+🔹 Minimizes memory usage by sharing objects.
+🔹 Separates intrinsic (shared) state from extrinsic (context) state.
+
+Example:
+IShape shape1 = ShapeFactory.GetCircle();
+shape1.Draw("Red");
+
+IShape shape2 = ShapeFactory.GetCircle();
+shape2.Draw("Blue"); // Same object, different color
+
+✔️ Key Idea: Reuses shared objects to reduce memory consumption.
