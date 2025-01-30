@@ -1,1 +1,11 @@
-﻿Overriding abstract method as cycle
+﻿Chain of Responsibility Pattern →
+🔹 Passes a request through a chain of handlers
+🔹 Each handler processes or forwards the request
+
+Example:
+var handler = new Logger();
+handler.SetNext(new Authenticator()).SetNext(new Processor());
+handler.Process("user"); 
+handler.Process("admin"); 
+
+✔️ Key Idea: Flexible request processing chain!
