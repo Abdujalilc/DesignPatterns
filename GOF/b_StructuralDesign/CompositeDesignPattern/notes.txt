@@ -1,0 +1,11 @@
+Composite Pattern →
+🔹 Treats individual and composite objects uniformly
+🔹 Enables part-whole hierarchies for flexibility
+
+Example:
+IGraphic circle = new Circle();  
+IGraphic group = new Group();  
+group.Add(circle);  
+group.Draw(); // Draws all components  
+
+✔️ Key Idea: Allows clients to work with single objects and groups in the same way!
