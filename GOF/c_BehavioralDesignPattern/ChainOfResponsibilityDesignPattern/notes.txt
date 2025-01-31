@@ -9,3 +9,34 @@ handler.Process("user");
 handler.Process("admin"); 
 
 ✔️ Key Idea: Flexible request processing chain!
+
+
+-------------------------------------------------
+
+Logger -> Authenticator -> Processor
+
+SetNext(new Authenticator()) → assigns Authenticator as the next handler
+SetNext(new Processor()) → assigns Processor as the next handler for Authenticator
+
+//Inside Logger.Process(), it calls base.Process(), which executes Authenticator.Process("user")
+
+//Authenticator.Process() calls base.Process(), which would call Processor.Process(), but conditional logic might block it
+
+Logger.Process("user") → base.Process() → Authenticator.Process("user") → base.Process() → Processor.Process("user")
+
+//Same flow, but if Authenticator does not block, Processor.Process("admin") executes
+Logger.Process("admin") → base.Process() → Authenticator.Process("admin") → base.Process() → Processor.Process("admin")
+
+
+-------------------------------------------------
+
+Key Programming Concept
+✔️ Instance uses another instance within itself
+✔️ SetNext() returns this, enabling chain-like method calls (handler.SetNext().SetNext())
+✔️ Method execution follows the chain dynamically
+
+-------------------------------------------------
+
+3 instances exist simultaneously
+✔️ Logger → Authenticator → Processor linked in memory
+✔️ Each holds a reference to the next, forming a chain

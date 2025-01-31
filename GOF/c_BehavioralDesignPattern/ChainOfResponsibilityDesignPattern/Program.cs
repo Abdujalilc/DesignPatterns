@@ -2,7 +2,7 @@
 class BaseHandler : IRequestHandler
 {
     private IRequestHandler _next;
-    public IRequestHandler SetNext(IRequestHandler next) { _next = next; return next; }
+    public IRequestHandler SetNext(IRequestHandler next) { _next = next; return next; } //creates child instance and returns
     public virtual void Process(string request) => _next?.Process(request);
 }
 class Logger : BaseHandler
@@ -12,7 +12,7 @@ class Logger : BaseHandler
 
 class Authenticator : BaseHandler
 {
-    public override void Process(string request)
+    public override void Process(string request)    
     {
         if (request != "admin") { Console.WriteLine("[Authenticator] Access Denied"); return; }
         base.Process(request);
@@ -26,9 +26,8 @@ class Program
 {
     static void Main()
     {
-        var handler = new Logger();
-        handler.SetNext(new Authenticator()).SetNext(new Processor());
-
+        Logger? handler = new Logger();
+        handler./*base*/SetNext(new Authenticator())./*base*/SetNext(new Processor());
         handler.Process("user");   // Logs & Denies
         handler.Process("admin");  // Logs, Authorizes, & Processes
     }
