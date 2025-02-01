@@ -1,18 +1,20 @@
-﻿IExpression exp = new Add(new Number(5), new Number(3));
-Console.WriteLine(exp.Interpret()); // 8
+﻿var context = new Context();
+context.SetVariable("x", 5);
+context.SetVariable("y", 3);
 
-interface IExpression { int Interpret(); } // Abstract Expression
+var expression = new Add(context.GetVariable("x"), context.GetVariable("y"));
+Console.WriteLine(expression.Interpret()); // 8
 
-class Number : IExpression // Terminal Expression
+class Context // Holds variable values
 {
-    private int _value;
-    public Number(int value) => _value = value;
-    public int Interpret() => _value;
+    private Dictionary<string, int> _variables = new();
+    public void SetVariable(string name, int value) => _variables[name] = value;
+    public int GetVariable(string name) => _variables[name];
 }
 
-class Add : IExpression // Non-Terminal Expression
+class Add // Concrete Expression (No recursion)
 {
-    private IExpression _left, _right;
-    public Add(IExpression left, IExpression right) => (_left, _right) = (left, right);
-    public int Interpret() => _left.Interpret() + _right.Interpret();
+    private int _left, _right;
+    public Add(int left, int right) => (_left, _right) = (left, right);
+    public int Interpret() => _left + _right;
 }

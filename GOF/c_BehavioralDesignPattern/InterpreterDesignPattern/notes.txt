@@ -1,19 +1,13 @@
 ﻿Interpreter Pattern →
-🔹 Defines a language grammar and interprets expressions
-🔹 Converts structured text into meaningful execution
+🔹 Defines a grammar and evaluates expressions.
 
 Example:
-IExpression exp = new Add(new Number(5), new Number(3));
-Console.WriteLine(exp.Interpret()); // 8
+var ctx = new Context();
+ctx.SetVariable("x", 5);
+ctx.SetVariable("y", 3);
+var expr = new Add(ctx.GetVariable("x"), ctx.GetVariable("y"));
+Console.WriteLine(expr.Interpret()); // 8
 
-✔️ Key Idea: Evaluates expressions using a defined grammar.
-
-Key Concept:
-✔ Recursion – Expressions are evaluated recursively
-✔ Encapsulation – Each rule is a separate class
-✔ Composability – Expressions form a tree structure
-
-Takeaway:
-✔ Each expression is an instance of IExpression
-✔ Interpret() executes meaningfully based on grammar
-✔ Used in math parsers, compilers, and DSLs
+✔ Key Idea: Parses and interprets values using a context.
+✔ No recursion needed, but still separates context and evaluation logic.
+✔ Interpretation (in programming): Converts structured data into execution

@@ -1,0 +1,13 @@
+Observer Pattern →
+🔹 Notifies multiple objects when the subject changes.
+
+Example:
+Subject subject = new Subject();
+Observer alice = new Observer("Alice");
+Observer bob = new Observer("Bob");
+
+subject.Attach(alice);
+subject.Attach(bob);
+subject.SetState("Update 1"); // Alice and Bob receive notification
+
+✔ Key Idea: Observers subscribe to a subject and get notified on updates.

@@ -1,14 +1,15 @@
-﻿CareTaker has 'List<Memento> ledTvList'
+﻿Memento Pattern →
+🔹 Captures and restores an object's state without exposing internals.
 
-originator has 'LEDTV ledTV'
+Example:
+Caretaker caretaker = new Caretaker();
+Editor editor = new Editor();
 
-Originator creates Memento CreateMemento()
-				return new Memento(ledTV)
-				
-CareTaker.AddMemento adds memento to List	
- and writes Memento's details to Console
- 
-So originator.ledTV gets value and loads to Memento.ledTV and  AddMemento adds Memento to  Caretaker.ledTvList with writing Details to console
+editor.Write("Version 1");
+caretaker.Save(editor.CreateMemento()); // Save state
 
+editor.Write("Version 2");
+editor.Restore(caretaker.GetMemento()); // Undo to Version 1
+Console.WriteLine(editor.GetText()); // Output: Version 1
 
-			
+✔ Key Idea: Allows undo/redo by saving object states.

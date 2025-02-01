@@ -1,0 +1,10 @@
+﻿Strategy Pattern →
+🔹 Selects an algorithm dynamically without modifying the context.
+
+Example:
+Context context = new Context(new StrategyA());
+context.Execute(); // Strategy A executed
+context.SetStrategy(new StrategyB());
+context.Execute(); // Strategy B executed
+
+✔ Key Idea: Encapsulates interchangeable algorithms.

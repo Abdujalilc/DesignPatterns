@@ -1,20 +1,22 @@
-﻿using IteratorDesignPattern;
+﻿var collection = new NumbersCollection(new int[] { 1, 2, 3 });
+var iterator = collection.GetIterator();
+while (iterator.HasNext())
+    Console.WriteLine(iterator.Next()); // 1 2 3
 
-ConcreteCollection collection = new ConcreteCollection();
-collection.AddEmployee(new Employee("Anurag", 100));
-collection.AddEmployee(new Employee("Pranaya", 101));
-collection.AddEmployee(new Employee("Santosh", 102));
-collection.AddEmployee(new Employee("Priyanka", 103));
-collection.AddEmployee(new Employee("Abinash", 104));
-collection.AddEmployee(new Employee("Preety", 105));
+interface IIterator { bool HasNext(); int Next(); } // Iterator interface
 
-// Create iterator
-Iterator iterator = collection.CreateIterator();
-//looping iterator      
-Console.WriteLine("Iterating over collection:");
-
-for (Employee emp = iterator.First(); !iterator.IsCompleted; emp = iterator.Next())
+class NumberIterator : IIterator // Concrete Iterator
 {
-    Console.WriteLine($"ID : {emp.ID} & Name : {emp.Name}");
+    private int[] _numbers;
+    private int _index = 0;
+    public NumberIterator(int[] numbers) => _numbers = numbers;
+    public bool HasNext() => _index < _numbers.Length;
+    public int Next() => _numbers[_index++];
 }
-Console.Read();
+
+class NumbersCollection // Iterable Collection
+{
+    private int[] _numbers;
+    public NumbersCollection(int[] numbers) => _numbers = numbers;
+    public IIterator GetIterator() => new NumberIterator(_numbers);
+}

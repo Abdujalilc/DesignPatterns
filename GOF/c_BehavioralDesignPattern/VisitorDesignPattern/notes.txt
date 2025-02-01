@@ -1,21 +1,9 @@
-﻿static Constructor
+﻿Visitor Pattern →
+🔹 Adds new behaviors to objects without modifying their structure.
 
-IVisitor: Doctor, Salesman
+Example:
+Element element = new ConcreteElement();
+Visitor visitor = new ConcreteVisitor();
+element.Accept(visitor); // Visiting ConcreteElement
 
-IElement: Kid
-
--static School()
-{
-	elements = new List<IElement>{new Kid("Ram"),new Kid("Sara"),new Kid("Pam")};
-}
--new Doctor("James")
-
--school.PerformOperation(doctor)
-	foreach (IElement? kid in elements)
-	{
-		kid.Accept(visitor);
-	}
-	
--kid.Accept(visitor)
-	visitor.Visit(this);
-	//Get and write kid's name to console;
+✔ Key Idea: Uses double dispatch to apply operations dynamically.

@@ -1,3 +1,10 @@
-﻿//ATM machine state
-first new ATMMachine() gets/sets  DebitCardNotInsertedState via ATMState interface,
-then ATMMachine.InsertDebitCard method changes type reference as atmMachineState = new DebitCardInsertedState();
+﻿State Pattern →
+🔹 Changes an object's behavior dynamically based on its state.
+
+Example:
+Context context = new Context(new StateA());
+context.Request(); // State A handling
+context.SetState(new StateB());
+context.Request(); // State B handling
+
+✔ Key Idea: Object behavior varies depending on its current state.

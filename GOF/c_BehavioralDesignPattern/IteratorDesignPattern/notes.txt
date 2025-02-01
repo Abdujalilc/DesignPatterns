@@ -1,19 +1,9 @@
 ﻿Iterator Pattern →
-🔹 Provides a way to access elements sequentially without exposing internal structure
+🔹 Provides a way to traverse a collection without exposing its structure
 
 Example:
-var collection = new NumbersCollection();
+var collection = new NumbersCollection(new[] { 1, 2, 3 });
 var iterator = collection.GetIterator();
-while (iterator.HasNext()) Console.WriteLine(iterator.Next());
+while (iterator.HasNext()) Console.WriteLine(iterator.Next()); // 1 2 3
 
-✔️ Key Idea: Separates traversal logic from collection implementation.
-
-Key Concept:
-✔ Encapsulation – Hides iteration details
-✔ Decoupling – Iterator works independently of collection
-✔ Polymorphism – Different iterators for different traversal strategies
-
-Takeaway:
-✔ Iterator abstracts iteration logic
-✔ Supports multiple ways to traverse collections
-✔ Used in custom collections, trees, and graphs
+✔ Key Idea: Encapsulates iteration logic, keeping it separate from the collection.

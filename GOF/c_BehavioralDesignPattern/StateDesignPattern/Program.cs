@@ -1,27 +1,20 @@
-﻿using StateDesignPattern;
+﻿Context context = new Context(new StateA());
+context.Request(); // State A handling
+context.SetState(new StateB());
+context.Request(); // State B handling
 
-// Initially ATM Machine in DebitCardNotInsertedState
-ATMMachine atmMachine = new ATMMachine();
-Console.WriteLine("ATM Machine Current state : "
-                + atmMachine.atmMachineState.GetType().Name);
-Console.WriteLine();
-atmMachine.EnterPin();
-atmMachine.WithdrawMoney();
-atmMachine.EjectDebitCard();
-atmMachine.InsertDebitCard();
-Console.WriteLine();
-// Debit Card has been inserted so internal state of ATM Machine
-// has been changed to DebitCardInsertedState
-Console.WriteLine("ATM Machine Current state : "
-                + atmMachine.atmMachineState.GetType().Name);
-Console.WriteLine();
-atmMachine.EnterPin();
-atmMachine.WithdrawMoney();
-atmMachine.InsertDebitCard();
-atmMachine.EjectDebitCard();
-Console.WriteLine("");
-// Debit Card has been ejected so internal state of ATM Machine
-// has been changed to DebitCardNotInsertedState
-Console.WriteLine("ATM Machine Current state : "
-                + atmMachine.atmMachineState.GetType().Name);
-Console.Read();
+// State interface
+interface IState { void Handle(); }
+
+// Concrete States
+class StateA : IState { public void Handle() => Console.WriteLine("State A handling"); }
+class StateB : IState { public void Handle() => Console.WriteLine("State B handling"); }
+
+// Context switches between states
+class Context
+{
+    private IState _state;
+    public Context(IState state) => _state = state;
+    public void SetState(IState state) => _state = state;
+    public void Request() => _state.Handle();
+}

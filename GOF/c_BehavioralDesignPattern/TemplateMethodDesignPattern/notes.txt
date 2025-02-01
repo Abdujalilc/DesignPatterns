@@ -1,1 +1,8 @@
-﻿from abstract house use wooden and concrete via override.
+﻿Template Method Pattern →
+🔹 Defines a common algorithm structure, allowing subclasses to override specific steps.
+
+Example:
+AbstractClass instance = new ConcreteClass();
+instance.TemplateMethod(); // Step 1 → Custom Step 2 → Step 3
+
+✔ Key Idea: Ensures a fixed flow while allowing customization.

@@ -1,16 +1,29 @@
-﻿//Create a Product with Out Of Stock Status
-using ObserverDesignPattern;
+﻿Subject subject = new Subject();
+Observer alice = new Observer("Alice");
+Observer bob = new Observer("Bob");
 
-Subject RedMI = new Subject("Red MI Mobile", 10000, "Out Of Stock");
-//User Anurag will be created and user1 object will be registered to the subject
-Observer user1 = new Observer("Anurag", RedMI);
-//User Pranaya will be created and user1 object will be registered to the subject
-Observer user2 = new Observer("Pranaya", RedMI);
-//User Priyanka will be created and user3 object will be registered to the subject
-Observer user3 = new Observer("Priyanka", RedMI);
+subject.Attach(alice);
+subject.Attach(bob);
+subject.SetState("Update 1"); // Alice and Bob receive notification
 
-Console.WriteLine("Red MI Mobile current state : " + RedMI.getAvailability());
-Console.WriteLine();
-// Now product is available
-RedMI.setAvailability("Available");
-Console.Read();
+class Subject  // Subject maintains state and notifies observers
+{
+    private List<IObserver> _observers = new List<IObserver>();
+    private string _state;
+
+    public void Attach(IObserver observer) => _observers.Add(observer);
+    public void SetState(string state)
+    {
+        _state = state;
+        Notify();
+    }
+    private void Notify() => _observers.ForEach(o => o.Update(_state));
+}
+
+interface IObserver { void Update(string state); } // Observer interface
+class Observer : IObserver // Concrete Observer
+{
+    private string _name;
+    public Observer(string name) => _name = name;
+    public void Update(string state) => Console.WriteLine(_name + " received: " + state);
+}
