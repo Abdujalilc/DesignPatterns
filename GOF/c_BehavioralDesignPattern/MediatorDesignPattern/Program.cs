@@ -1,26 +1,28 @@
-﻿using MediatorDesignPattern;
+﻿ChatMediator mediator = new ChatMediator();
+User alice = new User(mediator, "Alice");
+User bob = new User(mediator, "Bob");
 
-FacebookGroupMediator facebookMediator = new ConcreteFacebookGroupMediator();
+mediator.Register(alice).Register(bob);
+alice.Send("Hello!"); // Bob receives: "Hello!"
 
-User Ram = new ConcreteUser(facebookMediator, "Ram");
-User Dave = new ConcreteUser(facebookMediator, "Dave");
-User Smith = new ConcreteUser(facebookMediator, "Smith");
-User Rajesh = new ConcreteUser(facebookMediator, "Rajesh");
-User Sam = new ConcreteUser(facebookMediator, "Sam");
-User Pam = new ConcreteUser(facebookMediator, "Pam");
-User Anurag = new ConcreteUser(facebookMediator, "Anurag");
-User John = new ConcreteUser(facebookMediator, "John");
-
-facebookMediator.RegisterUser(Ram);
-facebookMediator.RegisterUser(Dave);
-facebookMediator.RegisterUser(Smith);
-facebookMediator.RegisterUser(Rajesh);
-facebookMediator.RegisterUser(Sam);
-facebookMediator.RegisterUser(Pam);
-facebookMediator.RegisterUser(Anurag);
-facebookMediator.RegisterUser(John);
-
-Dave.Send("dotnettutorials.net - this website is very good to learn Design Pattern");
-Console.WriteLine();
-Rajesh.Send("What is Design Patterns? Please explain ");
-Console.Read();
+interface IMediator { void Notify(string message, Colleague sender); } // Mediator interface
+class ChatMediator : IMediator // Concrete Mediator
+{
+    private List<Colleague> _users = new();
+    public ChatMediator Register(Colleague user) { _users.Add(user); return this; }
+    public void Notify(string message, Colleague sender) =>
+        _users.Where(u => u != sender).ToList().ForEach(u => u.Receive(message));
+}
+abstract class Colleague // Base class for participants
+{
+    protected IMediator _mediator;
+    public Colleague(IMediator mediator) => _mediator = mediator;
+    public abstract void Receive(string message);
+}
+class User : Colleague // Concrete Colleague
+{
+    public string Name { get; }
+    public User(IMediator mediator, string name) : base(mediator) => Name = name;
+    public void Send(string message) => _mediator.Notify(message, this);
+    public override void Receive(string message) => Console.WriteLine($"{Name} received: {message}");
+}

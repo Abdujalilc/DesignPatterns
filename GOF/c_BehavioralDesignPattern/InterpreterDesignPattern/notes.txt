@@ -1,1 +1,19 @@
-﻿Add type names to List and call methods of that types by iterating.
+﻿Interpreter Pattern →
+🔹 Defines a language grammar and interprets expressions
+🔹 Converts structured text into meaningful execution
+
+Example:
+IExpression exp = new Add(new Number(5), new Number(3));
+Console.WriteLine(exp.Interpret()); // 8
+
+✔️ Key Idea: Evaluates expressions using a defined grammar.
+
+Key Concept:
+✔ Recursion – Expressions are evaluated recursively
+✔ Encapsulation – Each rule is a separate class
+✔ Composability – Expressions form a tree structure
+
+Takeaway:
+✔ Each expression is an instance of IExpression
+✔ Interpret() executes meaningfully based on grammar
+✔ Used in math parsers, compilers, and DSLs

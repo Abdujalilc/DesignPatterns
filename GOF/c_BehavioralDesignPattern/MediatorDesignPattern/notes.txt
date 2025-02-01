@@ -1,1 +1,22 @@
-﻿
+﻿Mediator Pattern →
+🔹 Centralizes communication between objects to reduce direct dependencies
+
+Example:
+var mediator = new ChatMediator();
+var user1 = new User(mediator, "Alice");
+var user2 = new User(mediator, "Bob");
+
+mediator.Register(user1).Register(user2);
+user1.Send("Hello!"); // Bob receives: "Hello!"
+
+✔️ Key Idea: Objects communicate through the mediator instead of talking directly.
+
+Key Concept:
+✔ Encapsulation – Centralized communication logic
+✔ Decoupling – Components don’t reference each other directly
+✔ Scalability – New objects can join without modifying others
+
+Takeaway:
+✔ Mediator controls communication flow
+✔ Reduces dependencies between objects
+✔ Used in chat systems, UI components, and workflow engines

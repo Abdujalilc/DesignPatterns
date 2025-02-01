@@ -1,1 +1,19 @@
-﻿Manual iteration the List<Employee>.
+﻿Iterator Pattern →
+🔹 Provides a way to access elements sequentially without exposing internal structure
+
+Example:
+var collection = new NumbersCollection();
+var iterator = collection.GetIterator();
+while (iterator.HasNext()) Console.WriteLine(iterator.Next());
+
+✔️ Key Idea: Separates traversal logic from collection implementation.
+
+Key Concept:
+✔ Encapsulation – Hides iteration details
+✔ Decoupling – Iterator works independently of collection
+✔ Polymorphism – Different iterators for different traversal strategies
+
+Takeaway:
+✔ Iterator abstracts iteration logic
+✔ Supports multiple ways to traverse collections
+✔ Used in custom collections, trees, and graphs

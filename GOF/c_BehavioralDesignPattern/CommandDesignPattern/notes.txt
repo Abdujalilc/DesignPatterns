@@ -1,3 +1,20 @@
-﻿Document loaded in command types
-Command types are in MenuOptions via ICommand
-Menu options starts in Program.cs
+﻿Command Pattern →
+🔹 Encapsulates an action as an object
+🔹 Decouples sender (Invoker) from receiver
+
+Example:
+var remote = new RemoteControl();
+remote.SetCommand(new LightOnCommand(new Light()));
+remote.PressButton(); // Light is ON
+
+✔️ Key Idea: Invoker triggers commands without knowing execution details.
+
+Key Concept:
+✔ Encapsulation – Actions wrapped in commands
+✔ Decoupling – Invoker calls Execute(), not direct methods
+✔ Polymorphism – Different commands share ICommand
+
+Takeaway:
+✔ Commands are instances of ICommand
+✔ Invoker triggers execution without direct logic
+✔ Commands can be stored, queued, or undone

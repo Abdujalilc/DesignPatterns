@@ -1,29 +1,18 @@
-﻿using InterpreterDesignPattern;
+﻿IExpression exp = new Add(new Number(5), new Number(3));
+Console.WriteLine(exp.Interpret()); // 8
 
-List<AbstractExpression> objExpressions = new List<AbstractExpression>();
-Context context = new Context(DateTime.Now);
-Console.WriteLine("Please select the Expression  : MM DD YYYY or YYYY MM DD or DD MM YYYY ");
-context.expression = Console.ReadLine();
-string[] strArray = context.expression.Split(' ');
-foreach (var item in strArray)
+interface IExpression { int Interpret(); } // Abstract Expression
+
+class Number : IExpression // Terminal Expression
 {
-    if (item == "DD")
-    {
-        objExpressions.Add(new DayExpression());
-    }
-    else if (item == "MM")
-    {
-        objExpressions.Add(new MonthExpression());
-    }
-    else if (item == "YYYY")
-    {
-        objExpressions.Add(new YearExpression());
-    }
+    private int _value;
+    public Number(int value) => _value = value;
+    public int Interpret() => _value;
 }
-objExpressions.Add(new SeparatorExpression());
-foreach (var obj in objExpressions)
+
+class Add : IExpression // Non-Terminal Expression
 {
-    obj.Evaluate(context);
+    private IExpression _left, _right;
+    public Add(IExpression left, IExpression right) => (_left, _right) = (left, right);
+    public int Interpret() => _left.Interpret() + _right.Interpret();
 }
-Console.WriteLine(context.expression);
-Console.Read();
